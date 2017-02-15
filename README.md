@@ -28,6 +28,14 @@ npm install raspi
 
 **Note:** this module requires [Wiring Pi](http://wiringpi.com/) be installed before installation of this module. Wiring Pi is included by default in the full Raspbian OS, but not the lite version. If you want to check if it is installed or not, run `gpio` from the command line and make sure the command exists. If it is not installed, install it with `sudo apt-get install wiringpi`.
 
+If Wiring Pi is not installed, `npm install` will fail with the following error:
+```
+../src-native/init.cc:25:22: fatal error: wiringPi.h: No such file or directory
+ #include <wiringPi.h>
+                      ^
+compilation terminated.
+```
+
 **Warning**: this module requires GCC 4.8 or newer. This means that you should be running Raspbian Jessie or newer, released in September of 2015.
 
 Detailed instructions for getting a Raspberry Pi ready for NodeBots, including how to install Node.js, can be found in the [Raspi IO wiki](https://github.com/nebrius/raspi-io/wiki/Getting-a-Raspberry-Pi-ready-for-NodeBots)
